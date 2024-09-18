@@ -1,0 +1,40 @@
+Here's a breakdown of the differences between stack and heap memory, 
+and why you might choose one over the other:
+
+1. Stack Allocation:
+* Fast Access: Memory allocated on the stack is fast because it follows a Last In, 
+First Out (LIFO) structure. It’s automatically managed, so memory is freed 
+as soon as a function call ends.
+* Limited Size: The stack has a limited size, which means you can’t allocate 
+large amounts of memory on the stack.
+* Short-Lived Data: Data allocated on the stack exists only within the 
+function scope where it was created. As soon as the function returns, the memory is freed.
+* Examples: Typically used for local variables inside functions.
+==========> When to use the stack:
+ For small, short-lived objects that only need to exist within the scope of a function. 
+ When performance is critical and you need fast memory allocation and deallocation.
+2. Heap Allocation:
+* Flexible Size: The heap can be much larger than the stack, allowing you to allocate a 
+significant amount of memory. You can dynamically request memory during runtime.
+* Slower Access: Memory on the heap is slower to access compared to the stack because 
+it requires explicit management and can lead to fragmentation.
+* Persistent Data: Memory allocated on the heap remains allocated until you explicitly 
+free it. This means objects can outlive the function that created them.
+* Examples: Used when you need objects or data that persist outside of a function’s scope, 
+or when you need a dynamic amount of memory.
+=========> When to use the heap:
+
+For large data structures or objects that need to persist beyond a single function call.
+When you don’t know the size of the data at compile-time and need to allocate memory dynamically.
+The Point of the Exercise:
+ * You’re being asked to determine when it is better to allocate "zombies" (or any objects) on 
+    the stack versus the heap. This involves thinking about:
+
+* Lifetime: Do the zombies need to persist outside of a function? If so, heap allocation is better.
+* Size: Are you dealing with a large number of zombies or just a few? 
+    Large amounts of memory should go on the heap.
+* Performance: If speed is critical and the zombies are temporary, stack allocation might 
+    be faster and more efficient.
+=======> In summary, the exercise is helping you understand the trade-offs between stack and 
+    heap allocation, specifically for managing resources in a more efficient and 
+    performance-conscious way.
