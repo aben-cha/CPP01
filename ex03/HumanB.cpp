@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 19:19:37 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/19 10:47:10 by aben-cha         ###   ########.fr       */
+/*   Created: 2024/09/19 14:02:52 by aben-cha          #+#    #+#             */
+/*   Updated: 2024/09/19 16:12:18 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 #include <iostream>
-#include <string>
 
-Zombie::Zombie() {
-    name = "";
+HumanB::HumanB(const std::string& Name) {
+    name = Name;
 }
 
-void Zombie::setName(std::string nameZombie) {
-    name = nameZombie;
+void HumanB::attack() {
+    std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }
 
-Zombie::~Zombie() {
-    std::cout << name << " is destroyed." << std::endl;
-}
-
-void Zombie::announce( void ) {
-    if (name.compare("Foo") == 0)
-        std::cout << name;
-    else 
-        std::cout << "<" << name << ">";
-    std::cout << ": BraiiiiiiinnnzzzZ..." << std::endl; 
+void HumanB::setWeapon(Weapon& w) {
+    weapon = &w;
 }

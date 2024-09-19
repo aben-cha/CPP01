@@ -5,20 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 18:58:27 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/19 10:47:43 by aben-cha         ###   ########.fr       */
+/*   Created: 2024/09/19 11:15:12 by aben-cha          #+#    #+#             */
+/*   Updated: 2024/09/19 16:33:32 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 #include <iostream>
 #include <string>
 
 int main()
 {
-    Zombie* zombie;
-
-    zombie = zombieHorde(5, "Foo");
-    delete[] zombie;
-    return (0);
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
+    }
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+    return 0;
 }

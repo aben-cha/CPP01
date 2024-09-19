@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 18:58:27 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/19 10:47:43 by aben-cha         ###   ########.fr       */
+/*   Created: 2024/09/19 11:19:03 by aben-cha          #+#    #+#             */
+/*   Updated: 2024/09/19 16:15:05 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#ifndef WEAPON_H
+#define WEAPON_H
+
 #include <string>
 
-int main()
-{
-    Zombie* zombie;
+class Weapon {
+    private:
+        std::string type;
+    public:
+        Weapon(const std::string& newtype);
+        const std::string& getType( void );
+        void setType(const std::string& newType);
+};
 
-    zombie = zombieHorde(5, "Foo");
-    delete[] zombie;
-    return (0);
-}
+#endif
