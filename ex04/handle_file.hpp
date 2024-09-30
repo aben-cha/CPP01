@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   handle_file.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 14:02:52 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 21:43:04 by aben-cha         ###   ########.fr       */
+/*   Created: 2024/09/30 22:08:53 by aben-cha          #+#    #+#             */
+/*   Updated: 2024/09/30 22:13:13 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
+#ifndef FILES_HPP
+#define FILES_HPP
+
 #include <iostream>
+#include <fstream>
+#include <string>
 
-HumanB::HumanB(const std::string& Name) {
-    name = Name;
-}
+int handleError(std::ifstream& infile);
+void copyElement(std::ifstream& infile, std::string& s1, std::string& s2);
 
-void HumanB::attack() {
-    std::cout << name << " attacks with their " << weapon->getType() << std::endl;
-}
-
-void HumanB::setWeapon(Weapon& w) {
-    weapon = &w;
-}
+#endif

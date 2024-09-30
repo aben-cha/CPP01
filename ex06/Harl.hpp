@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 14:03:50 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:25:47 by aben-cha         ###   ########.fr       */
+/*   Created: 2024/09/30 22:18:41 by aben-cha          #+#    #+#             */
+/*   Updated: 2024/09/30 22:41:27 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANB_H
-#define HUMANB_H
+#ifndef HARL_HPP
+#define HARL_HPP
 
-#include "Weapon.hpp"
+#include <iostream>
+#include <string>
 
-class HumanB {
+class Harl {
     private:
-        std::string name;
-        Weapon* weapon;
+        void debug( void );
+        void info( void );
+        void warning( void );
+        void error( void );
     public:
-        HumanB(const std::string& Name);
-        void setWeapon(Weapon& w);
-        void attack();
+        void complain( std::string level );
 };
+
+void printLevels(void (Harl::*ptr[4])(void), int i, std::string* levels);
+void switch_statment(int i, void (Harl::*ptr[4])(void), std::string* levels);
 
 #endif

@@ -6,12 +6,14 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 19:19:42 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/18 23:16:12 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:24:28 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_H
 #define ZOMBIE_H
+
+#include <iostream>
 #include <string>
 
 class Zombie {

@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 12:01:10 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/19 15:15:02 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/09/30 22:25:41 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define HUMANA_H
 
 #include "Weapon.hpp"
-#include <string>
 
 class HumanA {
     private:
