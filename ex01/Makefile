@@ -1,6 +1,6 @@
 NAME= zombieHorde
 CPP= c++
-CFLAGS= -Wall -Wextra -Werror #-fsanitize=address
+CFLAGS= -Wall -Wextra -Werror -std=c++98
 SRC= main.cpp Zombie.cpp zombieHorde.cpp
 OBJ= $(SRC:%.cpp=%.o)
 
@@ -9,7 +9,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CPP) $(CFLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp Zombie.hpp Weapon.hpp HumanA.hpp HumanB.hpp
 	$(CPP) $(CFLAGS) -c $< -o $@
 
 clean:

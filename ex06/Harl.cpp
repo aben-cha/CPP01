@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:20:30 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:41:13 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/09 17:48:26 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,20 +83,4 @@ void Harl::complain( std::string level ) {
         i++;
     }
     switch_statment(i, ptr, levels);
-    // switch(i + 1) {
-    //     case 1:
-    //         printLevels(ptr, i, levels);
-    //         break ;
-    //     case 2:
-    //         printLevels(ptr, i, levels);
-    //         break;
-    //     case 3:
-    //         printLevels(ptr, i, levels);
-    //         break;
-    //     case 4:
-    //         printLevels(ptr, i, levels);
-    //         break;
-    //     default:
-    //         std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-    // }
 }

@@ -17,7 +17,7 @@ int main()
     Harl harl;
     std::string level;
 
-    std::cout << "Enter a level [DEBUG, INFO, WARNING, ERROR : ";
+    std::cout << "Enter a level [DEBUG, INFO, WARNING, ERROR] : ";
     std::getline(std::cin, level);
     harl.complain(level);
     return (0);

@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:58:27 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:24:57 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/09 14:45:50 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,12 @@
 int main()
 {
     Zombie* zombie;
+    int nbrZombie;
 
-    zombie = zombieHorde(5, "Foo");
+    nbrZombie = 4;
+    zombie = zombieHorde(nbrZombie, "Foo");
+    for(int i = 0; i < nbrZombie; i++)
+        zombie[i].announce();
     delete[] zombie;
     return (0);
 }
