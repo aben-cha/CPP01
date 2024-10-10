@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:10:36 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:15:22 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:17:38 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int handleError(std::ifstream& infile)
     return (0);
 }
 
-void copyElement(std::ifstream& infile, std::string& s1, std::string& s2) 
+void copyElement(std::ifstream& infile, std::string& s1, std::string& s2, std::string& av) 
 {
     std::string line;
     std::size_t found;
     std::string sub;
     std::size_t y;
-    std::ofstream outfile("filename.replace");
+    std::ofstream outfile(av + ".replace");
 
     if (!outfile) {
         std::cerr << "Error opening file for writing." << std::endl;

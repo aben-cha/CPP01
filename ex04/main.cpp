@@ -12,16 +12,22 @@
 
 #include "handle_file.hpp"
 
-int main()
+int main(int ac, char **av)
 {
-    std::ifstream infile("filename");
+    if (ac != 4) {
+        std::cerr << "Invalid parameters." << std::endl;
+        return (1);
+    }
+    std::ifstream infile(av[1]);
     std::string s1;
     std::string s2;
+    std::string s;
 
     if (handleError(infile))
         return (1);
-    s1 = "text";
-    s2 = "cpp01]";
-    copyElement(infile, s1, s2);
+    s1 = av[2];
+    s2 = av[3];
+    s = av[1];
+    copyElement(infile, s1, s2, s);
     return (0);
 }
