@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:18:41 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:41:27 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/10 15:07:59 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ class Harl {
         void complain( std::string level );
 };
 
-void printLevels(void (Harl::*ptr[4])(void), int i, std::string* levels);
-void switch_statment(int i, void (Harl::*ptr[4])(void), std::string* levels);
+void switch_statment(int i, void (Harl::*ptr[4])(void));
 
 #endif
