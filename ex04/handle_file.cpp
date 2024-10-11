@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:10:36 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/10/10 18:36:39 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/11 18:48:42 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int handleError(std::ifstream& infile)
 void copyElement(std::ifstream& infile, std::string& s1, std::string& s2, std::string& av) 
 {
     std::string line;
-    std::size_t found;
     std::string sub;
+    std::size_t found;
     std::ofstream outfile(av + ".replace");
 
     if (!outfile.is_open()) {
@@ -36,17 +36,26 @@ void copyElement(std::ifstream& infile, std::string& s1, std::string& s2, std::s
     {
         if (!infile.eof())
             line += "\n";
+        sub = "";
         while (1) 
         {
-            found = line.find(s1);
-            if (found == std::string::npos) {
+            if (s1.empty()) {
                 outfile << line;
                 break ;
             }
-            sub = line.substr(0, found) + s2 + line.substr(found + s1.length());
-            line = sub;
+            found = line.find(s1);
+            if (found == std::string::npos)
+            {
+                sub += line;
+                outfile << sub;
+                break ;
+            }
+            line = line.substr(0, found) + s2 + line.substr(found+ s1.length(), line.length());
+            sub += line.substr(0, found + s2.length());
+            line = &line[found + s2.length()];
         }
     }
     infile.close();
     outfile.close();
 }
+

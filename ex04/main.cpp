@@ -28,8 +28,8 @@ int main(int ac, char **av)
     s1 = av[2];
     s2 = av[3];
     s = av[1];
-    if (s1.empty())
-        return 1;
+    // if (s1.empty() && !s2.empty())
+    //     return 0;
     copyElement(infile, s1, s2, s);
     return (0);
 }
