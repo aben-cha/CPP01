@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 18:58:27 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/10/10 14:43:21 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/11 21:14:36 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main()
     Zombie* zombie;
     int nbrZombie;
 
-    nbrZombie = 2;
+    nbrZombie = 3;
     if (nbrZombie <= 0)
         return (1);
     zombie = zombieHorde(nbrZombie, "Foo");

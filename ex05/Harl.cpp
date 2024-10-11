@@ -6,7 +6,7 @@
 /*   By: aben-cha <aben-cha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 22:20:30 by aben-cha          #+#    #+#             */
-/*   Updated: 2024/09/30 22:21:39 by aben-cha         ###   ########.fr       */
+/*   Updated: 2024/10/11 21:25:52 by aben-cha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void Harl::debug( void ) {
 
 void Harl::info( void ) {
     std::cout << "I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger! If you did, I wouldn’t be asking for more!" << std::endl;
-
 }
 
 void Harl::warning( void ) {
@@ -35,7 +34,7 @@ void Harl::complain( std::string level ) {
         &Harl::debug, 
         &Harl::info, 
         &Harl::warning, 
-        &Harl ::error
+        &Harl::error
     };
     std::string levels[4] = {
         "DEBUG", 

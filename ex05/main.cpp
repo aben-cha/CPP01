@@ -19,6 +19,8 @@ int main()
 
     std::cout << "Enter a level [DEBUG, INFO, WARNING, ERROR] : ";
     std::getline(std::cin, level);
+    if (std::cin.eof())
+        return (1);
     harl.complain(level);
     return (0);
 }

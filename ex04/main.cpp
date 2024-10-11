@@ -18,18 +18,15 @@ int main(int ac, char **av)
         std::cerr << "Invalid parameters." << std::endl;
         return (1);
     }
-    std::ifstream infile(av[1]);
+    std::string filename = av[1];
+    std::ifstream infile(filename);
     std::string s1;
     std::string s2;
-    std::string s;
 
     if (handleError(infile))
         return (1);
     s1 = av[2];
     s2 = av[3];
-    s = av[1];
-    // if (s1.empty() && !s2.empty())
-    //     return 0;
-    copyElement(infile, s1, s2, s);
+    copyElement(infile, s1, s2, filename);
     return (0);
 }
